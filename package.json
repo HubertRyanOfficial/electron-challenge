@@ -1,0 +1,33 @@
+{
+  "name": "electron-challenge",
+  "version": "1.0.0",
+  "description": "A ellectron challenge",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "set DEBUG=false && electron-builder",
+    "pack": "set DEBUG=false && electron-builder --dir"
+  },
+  "author": "Hubert Ryan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.0.2",
+    "electron-builder": "^24.6.4",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "build": {
+    "productName": "Electon Challenge",
+    "appId": "com.electronchallegen",
+    "icon": "assets/icon-release.png",
+    "dmg": {
+      "format": "UDZO",
+      "sign": false,
+      "internetEnabled": false,
+      "icon": "assets/icon-release.png",
+      "background": "assets/dmg-background.png"
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
